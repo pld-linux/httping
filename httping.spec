@@ -19,9 +19,9 @@ the reply (only the headers). It can be used for monitoring or
 statistical purposes (measuring latency).
 
 %description -l pl
-httping jest narzêdziem podobnym do pinga, s³u¿±cym do wysy³ania zapytañ
-HTTP. Po podaniu URL-a httping pokazuje jak wiele czasu zajmuje
-po³±czenie, wys³anie zapytania i otrzymanie odpowiedzi (tylko
+httping jest narzêdziem podobnym do pinga, s³u¿±cym do wysy³ania
+zapytañ HTTP. Po podaniu URL-a httping pokazuje jak wiele czasu
+zajmuje po³±czenie, wys³anie zapytania i otrzymanie odpowiedzi (tylko
 nag³ówki). Httping mo¿e byæ u¿ywany do monitorowania lub do celów
 statystycznych.
 
