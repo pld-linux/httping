@@ -1,3 +1,4 @@
+# TODO: optflags
 Summary:	Ping-like tool for HTTP requests
 Summary(pl):	Narzêdzie do "pingowania" poprzez protokó³ HTTP
 Name:		httping
@@ -19,8 +20,8 @@ statistical purposes (measuring latency).
 
 %description -l pl
 httping jest narzêdziem podobnym do pinga, s³u¿±cym do wysy³ania zapytañ
-HTTP. Podaj URL, a httping poka¿e ci jak wiele czasu zajmuje
-po³±czenie, wys³anie zapytania i otrzymania odpowiedzi(tylko
+HTTP. Po podaniu URL-a httping pokazuje jak wiele czasu zajmuje
+po³±czenie, wys³anie zapytania i otrzymanie odpowiedzi (tylko
 nag³ówki). Httping mo¿e byæ u¿ywany do monitorowania lub do celów
 statystycznych.
 
