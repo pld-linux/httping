@@ -31,7 +31,8 @@ statystycznych.
 
 %build
 %{__make} \
-	CC="%{__cc}" CFLAGS="%{rpmcflags}"
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
