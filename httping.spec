@@ -7,7 +7,7 @@ License:	GPL
 Group:		Networking/Utilities
 Source0:	http://www.vanheusden.com/httping/%{name}-%{version}.tgz
 # Source0-md5:	04ce13275795676f6bb533154574949e
-Patch0:		%{name}-makefile.patch
+Patch0:		%{name}-Makefile.patch
 URL:		http://www.vanheusden.com/httping/
 BuildRequires:	openssl-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -27,12 +27,11 @@ statystycznych.
 
 %prep
 %setup -q
-%patch -p0
+%patch0 -p1
 
 %build
 %{__make} \
-	CC="%{__cc}" \
-	DEBUG="%{rpmcflags}"
+	CC="%{__cc}" CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT

@@ -1,0 +1,12 @@
+--- httping-0.0.96/Makefile~	2005-01-24 22:55:19.872476424 +0100
++++ httping-0.0.96/Makefile	2005-01-24 22:56:16.282900736 +0100
+@@ -16,7 +16,8 @@
+ 
+ DEBUG=#-g
+ LDFLAGS=-lssl $(DEBUG)
+-CFLAGS=-O2 -Wall -DVERSION=\"$(VERSION)\" $(DEBUG)
++CFLAGS ?= -O2
++override CFLAGS += -Wall -DVERSION=\"$(VERSION)\" $(DEBUG)
+ 
+ OBJS=http.o io.o str.o error.o utils.o main.o tcp.o mssl.o
+ 
