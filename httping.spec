@@ -1,4 +1,3 @@
-# TODO: optflags
 Summary:	Ping-like tool for HTTP requests
 Summary(pl):	Narzêdzie do "pingowania" poprzez protokó³ HTTP
 Name:		httping
@@ -8,6 +7,7 @@ License:	GPL
 Group:		Networking/Utilities
 Source0:	http://www.vanheusden.com/httping/%{name}-%{version}.tgz
 # Source0-md5:	04ce13275795676f6bb533154574949e
+Patch0:		%{name}-makefile.patch
 URL:		http://www.vanheusden.com/httping/
 BuildRequires:	openssl-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -27,10 +27,12 @@ statystycznych.
 
 %prep
 %setup -q
+%patch -p0
 
 %build
 %{__make} \
-	CC="%{__cc}"
+	CC="%{__cc}" \
+	DEBUG="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
