@@ -3,10 +3,10 @@
 @@ -16,7 +16,8 @@
  
  DEBUG=#-g
- LDFLAGS=-lssl $(DEBUG)
+ LDFLAGS=-lssl -lcrypto $(DEBUG)
 -CFLAGS=-O2 -Wall -DVERSION=\"$(VERSION)\" $(DEBUG)
 +CFLAGS ?= -O2
 +override CFLAGS += -Wall -DVERSION=\"$(VERSION)\" $(DEBUG)
  
- OBJS=http.o io.o str.o error.o utils.o main.o tcp.o mssl.o
+ OBJS=http.o io.o str.o error.o utils.o main.o tcp.o mssl.o res.o
  
