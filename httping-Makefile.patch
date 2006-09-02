@@ -1,14 +1,12 @@
---- httping-1.0.9/Makefile.orig	2006-01-01 19:18:58.000000000 +0100
-+++ httping-1.0.9/Makefile	2006-01-02 15:28:04.000000000 +0100
-@@ -14,9 +14,9 @@
+--- ./Makefile.og	2006-08-14 10:43:53.000000000 +0000
++++ ./Makefile	2006-09-02 19:40:48.000000000 +0000
+@@ -16,7 +16,8 @@
  
- VERSION=1.0.9
- 
--DEBUG=-g
+ DEBUG=-g # -D_DEBUG
  LDFLAGS+=-lssl -lcrypto $(DEBUG)
 -CFLAGS+=-O2 -Wall -DVERSION=\"$(VERSION)\" $(DEBUG)
 +CFLAGS ?= -O2
-+override CFLAGS += -Wall -DVERSION=\"$(VERSION)\"
++override CFLAGS += -Wall -DVERSION=\"$(VERSION)\" $(DEBUG)
  
- OBJS=http.o io.o str.o error.o utils.o main.o tcp.o mssl.o res.o
+ OBJS=mem.o http.o io.o str.o error.o utils.o main.o tcp.o mssl.o res.o
  
