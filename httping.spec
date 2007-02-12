@@ -1,5 +1,5 @@
 Summary:	Ping-like tool for HTTP requests
-Summary(pl):	Narzêdzie do "pingowania" poprzez protokó³ HTTP
+Summary(pl.UTF-8):   NarzÄ™dzie do "pingowania" poprzez protokÃ³Å‚ HTTP
 Name:		httping
 Version:	1.2.2
 Release:	1
@@ -18,11 +18,11 @@ will show how long it takes to connect, send a request, and retrieve
 the reply (only the headers). It can be used for monitoring or
 statistical purposes (measuring latency).
 
-%description -l pl
-httping jest narzêdziem podobnym do pinga, s³u¿±cym do wysy³ania
-zapytañ HTTP. Po podaniu URL-a httping pokazuje jak wiele czasu
-zajmuje po³±czenie, wys³anie zapytania i otrzymanie odpowiedzi (tylko
-nag³ówki). Httping mo¿e byæ u¿ywany do monitorowania lub do celów
+%description -l pl.UTF-8
+httping jest narzÄ™dziem podobnym do pinga, sÅ‚uÅ¼Ä…cym do wysyÅ‚ania
+zapytaÅ„ HTTP. Po podaniu URL-a httping pokazuje jak wiele czasu
+zajmuje poÅ‚Ä…czenie, wysÅ‚anie zapytania i otrzymanie odpowiedzi (tylko
+nagÅ‚Ã³wki). Httping moÅ¼e byÄ‡ uÅ¼ywany do monitorowania lub do celÃ³w
 statystycznych.
 
 %prep
