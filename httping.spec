@@ -1,5 +1,5 @@
 Summary:	Ping-like tool for HTTP requests
-Summary(pl.UTF-8):   Narzędzie do "pingowania" poprzez protokół HTTP
+Summary(pl.UTF-8):	Narzędzie do "pingowania" poprzez protokół HTTP
 Name:		httping
 Version:	1.2.2
 Release:	1
