@@ -1,13 +1,14 @@
 Summary:	Ping-like tool for HTTP requests
 Summary(pl.UTF-8):	Narzędzie do "pingowania" poprzez protokół HTTP
 Name:		httping
-Version:	1.4.1
-Release:	3
+Version:	1.4.4
+Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://www.vanheusden.com/httping/%{name}-%{version}.tgz
-# Source0-md5:	bde1ff3c01343d2371d8f34fbf8a1d9a
-Patch0:		%{name}-strndup.patch
+# Source0-md5:	e36bb30bd758c766d7260bdde6fe6450
+# This patch is now part of httping
+#Patch0:		%{name}-strndup.patch
 URL:		http://www.vanheusden.com/httping/
 BuildRequires:	openssl-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -27,7 +28,7 @@ statystycznych.
 
 %prep
 %setup -q
-%patch0 -p1
+#%patch0 -p1
 
 %build
 %{__make} \
