@@ -1,12 +1,12 @@
 Summary:	Ping-like tool for HTTP requests
 Summary(pl.UTF-8):	Narzędzie do "pingowania" poprzez protokół HTTP
 Name:		httping
-Version:	1.5.3
+Version:	1.5.4
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://www.vanheusden.com/httping/%{name}-%{version}.tgz
-# Source0-md5:	62879f0a2d70e32279081276d42aaa28
+# Source0-md5:	9829992898a50684a63ae5ddf1a506d1
 URL:		http://www.vanheusden.com/httping/
 BuildRequires:	openssl-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
