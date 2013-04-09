@@ -1,13 +1,16 @@
 Summary:	Ping-like tool for HTTP requests
 Summary(pl.UTF-8):	Narzędzie do "pingowania" poprzez protokół HTTP
 Name:		httping
-Version:	1.6
+Version:	2.2
 Release:	1
 License:	GPLv2
 Group:		Networking/Utilities
 Source0:	http://www.vanheusden.com/httping/%{name}-%{version}.tgz
-# Source0-md5:	7e8f054077a4b186b924cdd48906e0a2
+# Source0-md5:	622792cfd5116c99d0eff34b730e8737
+Patch0:		ncurses-headers.patch
 URL:		http://www.vanheusden.com/httping/
+BuildRequires:	fftw3-devel
+BuildRequires:	ncurses-devel
 BuildRequires:	openssl-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -26,8 +29,15 @@ statystycznych.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+cat << EOF > makefile.inc
+SSL=yes
+NC=yes
+FW=yes
+EOF
+
 %{__make} \
 	CC="%{__cc}" \
 	DEBUG="" \
