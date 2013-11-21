@@ -1,12 +1,12 @@
 Summary:	Ping-like tool for HTTP requests
 Summary(pl.UTF-8):	Narzędzie do "pingowania" poprzez protokół HTTP
 Name:		httping
-Version:	2.2.1
+Version:	2.3.3
 Release:	1
 License:	GPL v2
 Group:		Networking/Utilities
 Source0:	http://www.vanheusden.com/httping/%{name}-%{version}.tgz
-# Source0-md5:	ccc1666f435a37f9472ab6b97f174fab
+# Source0-md5:	a4ed1ab05a1cc9fc473ade53c1e5927b
 URL:		http://www.vanheusden.com/httping/
 BuildRequires:	fftw3-devel
 BuildRequires:	ncurses-devel
@@ -43,16 +43,19 @@ EOF
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
+install -d $RPM_BUILD_ROOT%{_localedir}/nl/LC_MESSAGES
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%find_lang httping
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f httping.lang
 %defattr(644,root,root,755)
 %doc readme.txt
 %attr(755,root,root) %{_bindir}/httping
-%{_mandir}/man1/httping*
+%{_mandir}/man1/httping.1*
+%{_mandir}/nl/man1/httping-nl.1*
